@@ -1,4 +1,5 @@
 streamlit
-langflow>=1.4.2
 openai
+langchain
+python-dotenv
 cassio

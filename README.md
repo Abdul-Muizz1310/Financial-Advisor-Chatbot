@@ -1,24 +1,29 @@
-# 💰 Finance RAG Chatbot (Streamlit + Langflow)
+# Finance RAG Chatbot
 
-This is a Streamlit UI wrapper for a Langflow-powered RAG chatbot using financial data from Pakistan Stock Exchange (2001–2024).
+A Streamlit-based chatbot that uses Retrieval-Augmented Generation (RAG) over Pakistan Stock Exchange documents (2001–2024).
 
-## 🚀 Features
+## 🔧 Setup
 
-- Langflow JSON-based flow execution
-- Streamlit for interactive UI
-- AstraDB as vector DB
-- OpenAI LLM backend
+1. Clone the repo.
+2. Create a `.env` file with:
+   ```
+   OPENAI_API_KEY=
+   ASTRA_DB_ID=
+   ASTRA_DB_REGION=
+   ASTRA_DB_KEYSPACE=
+   ASTRA_DB_APPLICATION_TOKEN=
+   ```
+3. Install dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+4. Run locally:
+   ```
+   streamlit run app.py
+   ```
 
-## 🛠️ Local Setup
+## 🚀 Deploy on Streamlit Community Cloud
 
-```bash
-pip install -r requirements.txt
-streamlit run streamlit_app.py
-```
-
-## 🌐 Deployment
-
-Deploy easily to [Streamlit Cloud](https://streamlit.io/cloud). Set environment secrets:
-- `OPENAI_API_KEY`
-- `ASTRA_DB_APPLICATION_TOKEN`
-- `ASTRA_DB_ID`
+1. Push code to GitHub.
+2. Connect GitHub repo on [streamlit.io](https://streamlit.io/cloud).
+3. Add `.env` values in Streamlit Cloud **Secrets Manager**.
